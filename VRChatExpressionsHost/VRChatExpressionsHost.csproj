@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7830C97-66EA-48F6-902B-F03F6762DEF6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VRChatExpressionsHost</RootNamespace>
+    <AssemblyName>VRChatExpressionsHost</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2019.4.31f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity\Hub\Editor\2019.4.31f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Devices">
+      <HintPath>..\..\..\..\..\..\WINDOWS\System32\WinMetadata\Windows.Devices.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Foundation">
+      <HintPath>..\..\..\..\..\..\WINDOWS\System32\WinMetadata\Windows.Foundation.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Security">
+      <HintPath>..\..\..\..\..\..\WINDOWS\System32\WinMetadata\Windows.Security.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Storage">
+      <HintPath>..\..\..\..\..\..\WINDOWS\System32\WinMetadata\Windows.Storage.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.System">
+      <HintPath>..\..\..\..\..\..\WINDOWS\System32\WinMetadata\Windows.System.winmd</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLEHeartRate.cs" />
+    <Compile Include="FacialTracking.cs" />
+    <Compile Include="HostMannager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_Eye.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_EyeData.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_EyeDataType_v1.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_EyeDataType_v2.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_EyeShapeTableDrawer.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_EyeShapeTableDrawer_v2.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_Eye_API.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_Eye_Enums.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_Eye_Framework.cs" />
+    <Compile Include="SRanipal\Eye\SRanipal_Eye_v2.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_Lip.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_LipData_v1.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_LipData_v2.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_LipShapeTableDrawer.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_LipShapeTableDrawer_v2.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_Lip_API.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_Lip_Framework.cs" />
+    <Compile Include="SRanipal\Lip\SRanipal_Lip_v2.cs" />
+    <Compile Include="SRanipal\SRanipal_API.cs" />
+    <Compile Include="SRanipal\SRanipal_Enums.cs" />
+    <Compile Include="SRanipal\SRWorks_Enums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SRanipal\SRanipal.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+</Project>
