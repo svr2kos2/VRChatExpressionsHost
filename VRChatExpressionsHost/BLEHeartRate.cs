@@ -82,6 +82,7 @@ namespace VRChatExpressionsHost
                 if (CurrentStatus == Status.STOPED || CurrentStatus == Status.ERROR || (CurrentStatus == Status.RUNNING && (DateTime.Now - lastupdate).TotalSeconds > 5))
                 {
                     Console.WriteLine("Retry");
+                    ValueChangedEvent(0);
                     Initialize();
                     Thread.Sleep(3000);
                 }
